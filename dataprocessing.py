@@ -21,7 +21,7 @@ from pyspark.sql.functions import concat_ws, collect_list
 spark = SparkSession.builder.appName("DataProcess").config('spark.ui.port', '4050').getOrCreate()
 # Disabe W&B
 os.environ["WANDB_DISABLED"] = "true"
-export PYSPARK_PYTHON=./venv/bin/python
+#export PYSPARK_PYTHON=./venv/bin/python
 # Load the dataset and display some values
 Link = 'data/Train.csv'
 df = pd.read_csv(Link)
@@ -36,7 +36,7 @@ for column_name, dtype in df.dtypes.items():
 sdf = spark.createDataFrame(df)
 sdf.show()
 
-exit()
+
 # A way to eliminate rows containing NaN values
 sdf = sdf.dropna()
 sdf.show()
