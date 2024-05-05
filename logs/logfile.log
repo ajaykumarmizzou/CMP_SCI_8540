@@ -1,0 +1,15 @@
+INFO:root:Spark session created
+INFO:root:W&B disabled
+INFO:root:Dataset loaded
+INFO:root:Converted pandas DataFrame to PySpark DataFrame
+INFO:root:Dropped rows containing NaN values
+INFO:root:Counted the number of each label
+INFO:root:Counted the number of each agreement
+INFO:root:Calculated the length of each review
+INFO:root:Found the length of the longest review
+INFO:root:Found the length of the shortest review
+INFO:root:Saved distribution of text lengths plot
+INFO:root:Saved distribution of sentiments plot
+INFO:root:Saved distribution of agreement percentages plot
+INFO:root:Saved word cloud
+INFO:py4j.clientserver:Closing down clientserver connection
