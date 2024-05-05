@@ -1,0 +1,668 @@
+$SPARK_HOME/bin/spark-submit setup.py  > ./logs/setup.py_full.logs
+24/05/05 20:12:57 INFO SparkContext: Running Spark version 3.5.1
+24/05/05 20:12:57 INFO SparkContext: OS info Linux, 5.15.0-101-generic, amd64
+24/05/05 20:12:57 INFO SparkContext: Java version 11.0.22
+24/05/05 20:12:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/05/05 20:12:57 INFO ResourceUtils: ==============================================================
+24/05/05 20:12:57 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/05/05 20:12:57 INFO ResourceUtils: ==============================================================
+24/05/05 20:12:57 INFO SparkContext: Submitted application: DataProcess
+24/05/05 20:12:57 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/05/05 20:12:57 INFO ResourceProfile: Limiting resource is cpu
+24/05/05 20:12:57 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/05/05 20:12:57 INFO SecurityManager: Changing view acls to: hadooopusr
+24/05/05 20:12:57 INFO SecurityManager: Changing modify acls to: hadooopusr
+24/05/05 20:12:57 INFO SecurityManager: Changing view acls groups to: 
+24/05/05 20:12:57 INFO SecurityManager: Changing modify acls groups to: 
+24/05/05 20:12:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hadooopusr; groups with view permissions: EMPTY; users with modify permissions: hadooopusr; groups with modify permissions: EMPTY
+24/05/05 20:12:58 INFO Utils: Successfully started service 'sparkDriver' on port 46065.
+24/05/05 20:12:58 INFO SparkEnv: Registering MapOutputTracker
+24/05/05 20:12:58 INFO SparkEnv: Registering BlockManagerMaster
+24/05/05 20:12:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/05/05 20:12:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/05/05 20:12:58 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/05/05 20:12:58 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d875c6d8-023a-4f40-be4e-7423f4df106a
+24/05/05 20:12:58 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/05/05 20:12:58 INFO SparkEnv: Registering OutputCommitCoordinator
+24/05/05 20:12:58 INFO JettyUtils: Start Jetty 0.0.0.0:4050 for SparkUI
+24/05/05 20:12:58 INFO Utils: Successfully started service 'SparkUI' on port 4050.
+24/05/05 20:12:58 INFO Executor: Starting executor ID driver on host 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512
+24/05/05 20:12:58 INFO Executor: OS info Linux, 5.15.0-101-generic, amd64
+24/05/05 20:12:58 INFO Executor: Java version 11.0.22
+24/05/05 20:12:58 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/05/05 20:12:58 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5575a298 for default.  
+24/05/05 20:12:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41587.
+24/05/05 20:12:58 INFO NettyBlockTransferService: Server created on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587
+24/05/05 20:12:58 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/05/05 20:12:58 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, 41587, None)
+24/05/05 20:12:58 INFO BlockManagerMasterEndpoint: Registering block manager 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 with 434.4 MiB RAM, BlockManagerId(driver, 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, 41587, None)
+24/05/05 20:12:58 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, 41587, None)
+24/05/05 20:12:58 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, 41587, None)
+24/05/05 20:12:59 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/05/05 20:12:59 INFO SharedState: Warehouse path is 'file:/home/hadooopusr/CMP_SCI_8540/spark-warehouse'.
+24/05/05 20:13:01 INFO CodeGenerator: Code generated in 161.412062 ms
+24/05/05 20:13:01 INFO SparkContext: Starting job: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62
+24/05/05 20:13:01 INFO DAGScheduler: Got job 0 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62) with 16 output partitions
+24/05/05 20:13:01 INFO DAGScheduler: Final stage: ResultStage 0 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62)
+24/05/05 20:13:01 INFO DAGScheduler: Parents of final stage: List()
+24/05/05 20:13:01 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:01 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[9] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62), which has no missing parents
+24/05/05 20:13:01 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 18.4 KiB, free 434.4 MiB)
+24/05/05 20:13:01 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 434.4 MiB)
+24/05/05 20:13:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 8.3 KiB, free: 434.4 MiB)
+24/05/05 20:13:01 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:01 INFO DAGScheduler: Submitting 16 missing tasks from ResultStage 0 (PythonRDD[9] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/05/05 20:13:01 INFO TaskSchedulerImpl: Adding task set 0.0 with 16 tasks resource profile 0
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, PROCESS_LOCAL, 91146 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 1, PROCESS_LOCAL, 90908 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 2, PROCESS_LOCAL, 92953 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 3, PROCESS_LOCAL, 91367 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 4, PROCESS_LOCAL, 92171 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 5, PROCESS_LOCAL, 92768 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 6, PROCESS_LOCAL, 92043 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 7, PROCESS_LOCAL, 90367 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 8, PROCESS_LOCAL, 90770 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 9, PROCESS_LOCAL, 92979 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 10, PROCESS_LOCAL, 91495 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 11, PROCESS_LOCAL, 92835 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 12, PROCESS_LOCAL, 92973 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 13, PROCESS_LOCAL, 92888 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 14, PROCESS_LOCAL, 93357 bytes)
+24/05/05 20:13:02 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 15, PROCESS_LOCAL, 92918 bytes)
+24/05/05 20:13:02 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+24/05/05 20:13:02 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+24/05/05 20:13:02 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+24/05/05 20:13:02 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+24/05/05 20:13:02 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+24/05/05 20:13:02 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+24/05/05 20:13:02 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+24/05/05 20:13:02 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+24/05/05 20:13:02 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+24/05/05 20:13:02 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+24/05/05 20:13:02 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+24/05/05 20:13:02 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+24/05/05 20:13:02 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+24/05/05 20:13:02 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+24/05/05 20:13:02 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+24/05/05 20:13:02 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/05/05 20:13:02 INFO CodeGenerator: Code generated in 73.138362 ms
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 652, boot = 488, init = 163, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 568, boot = 471, init = 96, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 579, boot = 478, init = 100, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 645, boot = 467, init = 176, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 231, boot = 71, init = 158, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 599, boot = 511, init = 86, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 718, boot = 526, init = 191, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 650, boot = 529, init = 120, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 565, boot = 469, init = 95, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 228, boot = 9, init = 217, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 634, boot = 465, init = 167, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 682, boot = 508, init = 172, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 602, boot = 503, init = 98, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 240, boot = 68, init = 170, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 652, boot = 491, init = 160, finish = 1
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 749, boot = 523, init = 224, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 244, boot = 56, init = 185, finish = 3
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 632, boot = 475, init = 155, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 248, boot = 4, init = 242, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 235, boot = 6, init = 227, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 249, boot = 33, init = 214, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 249, boot = 12, init = 234, finish = 3
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 260, boot = 63, init = 196, finish = 1
+24/05/05 20:13:03 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 3230 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 3277 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 614, boot = 520, init = 93, finish = 1
+24/05/05 20:13:03 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 269, boot = 54, init = 212, finish = 3
+24/05/05 20:13:03 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 664, boot = 497, init = 165, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 274, boot = 37, init = 235, finish = 2
+24/05/05 20:13:03 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 283, boot = 101, init = 180, finish = 2
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 284, boot = 51, init = 230, finish = 3
+24/05/05 20:13:03 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 299, boot = 66, init = 230, finish = 3
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1189 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/16)
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 305, boot = 60, init = 243, finish = 2
+24/05/05 20:13:03 INFO Executor: Finished task 15.0 in stage 0.0 (TID 15). 3236 bytes result sent to driver
+24/05/05 20:13:03 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 1196 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (2/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1228 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (3/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 1197 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (4/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 1198 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (5/16)
+24/05/05 20:13:03 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 40013
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 1206 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (6/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 1203 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (7/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 1205 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (8/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 1199 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (9/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 1200 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (10/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 1203 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (11/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 1209 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (12/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1210 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (13/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 1199 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (14/16)
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1212 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (15/16)
+24/05/05 20:13:03 INFO PythonRunner: Times: total = 327, boot = 99, init = 226, finish = 2
+24/05/05 20:13:03 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 3234 bytes result sent to driver
+24/05/05 20:13:03 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 1225 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (16/16)
+24/05/05 20:13:03 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+24/05/05 20:13:03 INFO DAGScheduler: ResultStage 0 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62) finished in 1.405 s
+24/05/05 20:13:03 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:03 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/05/05 20:13:03 INFO DAGScheduler: Job 0 finished: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:62, took 1.455706 s
+24/05/05 20:13:03 INFO CodeGenerator: Code generated in 54.280858 ms
+24/05/05 20:13:03 INFO DAGScheduler: Registering RDD 11 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+24/05/05 20:13:03 INFO DAGScheduler: Got map stage job 1 (javaToPython at NativeMethodAccessorImpl.java:0) with 16 output partitions     
+24/05/05 20:13:03 INFO DAGScheduler: Final stage: ShuffleMapStage 1 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:03 INFO DAGScheduler: Parents of final stage: List()
+24/05/05 20:13:03 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:03 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[11] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:03 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 39.3 KiB, free 434.3 MiB)
+24/05/05 20:13:03 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 18.5 KiB, free 434.3 MiB)
+24/05/05 20:13:03 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 18.5 KiB, free: 434.4 MiB)
+24/05/05 20:13:03 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:03 INFO DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[11] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/05/05 20:13:03 INFO TaskSchedulerImpl: Adding task set 1.0 with 16 tasks resource profile 0
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 16) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, PROCESS_LOCAL, 91135 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 17) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 1, PROCESS_LOCAL, 90897 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 18) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 2, PROCESS_LOCAL, 92942 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 19) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 3, PROCESS_LOCAL, 91356 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 20) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 4, PROCESS_LOCAL, 92160 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 21) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 5, PROCESS_LOCAL, 92757 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 22) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 6, PROCESS_LOCAL, 92032 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 23) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 7, PROCESS_LOCAL, 90356 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 24) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 8, PROCESS_LOCAL, 90759 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 25) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 9, PROCESS_LOCAL, 92968 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 26) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 10, PROCESS_LOCAL, 91484 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 27) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 11, PROCESS_LOCAL, 92824 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 28) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 12, PROCESS_LOCAL, 92962 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 29) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 13, PROCESS_LOCAL, 92877 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 30) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 14, PROCESS_LOCAL, 93346 bytes)
+24/05/05 20:13:03 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 31) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 15, PROCESS_LOCAL, 92907 bytes)
+24/05/05 20:13:03 INFO Executor: Running task 0.0 in stage 1.0 (TID 16)
+24/05/05 20:13:03 INFO Executor: Running task 1.0 in stage 1.0 (TID 17)
+24/05/05 20:13:03 INFO Executor: Running task 12.0 in stage 1.0 (TID 28)
+24/05/05 20:13:03 INFO Executor: Running task 11.0 in stage 1.0 (TID 27)
+24/05/05 20:13:03 INFO Executor: Running task 10.0 in stage 1.0 (TID 26)
+24/05/05 20:13:03 INFO Executor: Running task 14.0 in stage 1.0 (TID 30)
+24/05/05 20:13:03 INFO Executor: Running task 15.0 in stage 1.0 (TID 31)
+24/05/05 20:13:03 INFO Executor: Running task 8.0 in stage 1.0 (TID 24)
+24/05/05 20:13:03 INFO Executor: Running task 5.0 in stage 1.0 (TID 21)
+24/05/05 20:13:03 INFO Executor: Running task 7.0 in stage 1.0 (TID 23)
+24/05/05 20:13:03 INFO Executor: Running task 13.0 in stage 1.0 (TID 29)
+24/05/05 20:13:03 INFO Executor: Running task 4.0 in stage 1.0 (TID 20)
+24/05/05 20:13:03 INFO Executor: Running task 6.0 in stage 1.0 (TID 22)
+24/05/05 20:13:03 INFO Executor: Running task 3.0 in stage 1.0 (TID 19)
+24/05/05 20:13:03 INFO Executor: Running task 2.0 in stage 1.0 (TID 18)
+24/05/05 20:13:03 INFO Executor: Running task 9.0 in stage 1.0 (TID 25)
+24/05/05 20:13:03 INFO CodeGenerator: Code generated in 131.57607 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 10.810134 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 7.631859 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 10.735443 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 12.406468 ms
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 97, boot = -858, init = 954, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 257, boot = -807, init = 1062, finish = 2
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 164, boot = -639, init = 802, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 156, boot = -738, init = 893, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 149, boot = -805, init = 943, finish = 11
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 173, boot = -887, init = 1060, finish = 0
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 90, boot = -804, init = 893, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 162, boot = -707, init = 868, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 200, boot = -626, init = 825, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 165, boot = -806, init = 970, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 261, boot = -815, init = 1075, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 234, boot = -602, init = 835, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 87, boot = -891, init = 977, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 96, boot = -619, init = 714, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 155, boot = -854, init = 1008, finish = 1
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 179, boot = -875, init = 1053, finish = 1
+24/05/05 20:13:04 INFO Executor: Finished task 7.0 in stage 1.0 (TID 23). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 4.0 in stage 1.0 (TID 20). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 15.0 in stage 1.0 (TID 31). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 10.0 in stage 1.0 (TID 26). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 1.0 in stage 1.0 (TID 17). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 13.0 in stage 1.0 (TID 29). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 6.0 in stage 1.0 (TID 22). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 0.0 in stage 1.0 (TID 16). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 9.0 in stage 1.0 (TID 25). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 12.0 in stage 1.0 (TID 28). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO Executor: Finished task 2.0 in stage 1.0 (TID 18). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 31) in 515 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 23) in 518 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (2/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 17) in 520 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (3/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 29) in 517 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (4/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 22) in 519 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (5/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 16) in 523 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (6/16)
+24/05/05 20:13:04 INFO Executor: Finished task 14.0 in stage 1.0 (TID 30). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 25) in 519 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (7/16)
+24/05/05 20:13:04 INFO Executor: Finished task 11.0 in stage 1.0 (TID 27). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 28) in 518 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (8/16)
+24/05/05 20:13:04 INFO Executor: Finished task 5.0 in stage 1.0 (TID 21). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 20) in 521 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (9/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 26) in 519 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (10/16)
+24/05/05 20:13:04 INFO Executor: Finished task 8.0 in stage 1.0 (TID 24). 2980 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 18) in 523 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (11/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 30) in 521 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (12/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 27) in 522 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (13/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 21) in 524 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (14/16)
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 24) in 524 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (15/16)
+24/05/05 20:13:04 INFO Executor: Finished task 3.0 in stage 1.0 (TID 19). 2937 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 19) in 528 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (16/16)
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/05/05 20:13:04 INFO DAGScheduler: ShuffleMapStage 1 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.566 s
+24/05/05 20:13:04 INFO DAGScheduler: looking for newly runnable stages
+24/05/05 20:13:04 INFO DAGScheduler: running: Set()
+24/05/05 20:13:04 INFO DAGScheduler: waiting: Set()
+24/05/05 20:13:04 INFO DAGScheduler: failed: Set()
+24/05/05 20:13:04 INFO ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/05 20:13:04 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 14.708899 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 14.057816 ms
+24/05/05 20:13:04 INFO SparkContext: Starting job: javaToPython at NativeMethodAccessorImpl.java:0
+24/05/05 20:13:04 INFO DAGScheduler: Got job 2 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/05 20:13:04 INFO DAGScheduler: Final stage: ResultStage 3 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:04 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+24/05/05 20:13:04 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:04 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[16] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 41.6 KiB, free 434.3 MiB)
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 20.1 KiB, free 434.3 MiB)
+24/05/05 20:13:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 20.1 KiB, free: 434.4 MiB)
+24/05/05 20:13:04 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:04 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[16] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+24/05/05 20:13:04 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 32) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+24/05/05 20:13:04 INFO Executor: Running task 0.0 in stage 3.0 (TID 32)
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Getting 16 (3.0 KiB) non-empty blocks including 16 (3.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 24.451139 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 8.33029 ms
+24/05/05 20:13:04 INFO Executor: Finished task 0.0 in stage 3.0 (TID 32). 5540 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 32) in 115 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+24/05/05 20:13:04 INFO DAGScheduler: ResultStage 3 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.130 s
+24/05/05 20:13:04 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+24/05/05 20:13:04 INFO DAGScheduler: Job 2 finished: javaToPython at NativeMethodAccessorImpl.java:0, took 0.144220 s
+24/05/05 20:13:04 INFO DAGScheduler: Registering RDD 17 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+24/05/05 20:13:04 INFO DAGScheduler: Got map stage job 3 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions      
+24/05/05 20:13:04 INFO DAGScheduler: Final stage: ShuffleMapStage 5 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:04 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+24/05/05 20:13:04 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:04 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[17] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 42.0 KiB, free 434.2 MiB)
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 20.4 KiB, free 434.2 MiB)
+24/05/05 20:13:04 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 20.4 KiB, free: 434.3 MiB)
+24/05/05 20:13:04 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:04 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[17] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+24/05/05 20:13:04 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 33) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7604 bytes)
+24/05/05 20:13:04 INFO Executor: Running task 0.0 in stage 5.0 (TID 33)
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 5.631075 ms
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Getting 16 (3.0 KiB) non-empty blocks including 16 (3.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/05/05 20:13:04 INFO Executor: Finished task 0.0 in stage 5.0 (TID 33). 5473 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 33) in 45 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool
+24/05/05 20:13:04 INFO DAGScheduler: ShuffleMapStage 5 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.061 s
+24/05/05 20:13:04 INFO DAGScheduler: looking for newly runnable stages
+24/05/05 20:13:04 INFO DAGScheduler: running: Set()
+24/05/05 20:13:04 INFO DAGScheduler: waiting: Set()
+24/05/05 20:13:04 INFO DAGScheduler: failed: Set()
+24/05/05 20:13:04 INFO ShufflePartitionsUtil: For shuffle(1), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 9.182459 ms
+24/05/05 20:13:04 INFO SparkContext: Starting job: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71
+24/05/05 20:13:04 INFO DAGScheduler: Got job 4 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71) with 1 output partitions
+24/05/05 20:13:04 INFO DAGScheduler: Final stage: ResultStage 8 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71)
+24/05/05 20:13:04 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+24/05/05 20:13:04 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:04 INFO DAGScheduler: Submitting ResultStage 8 (PythonRDD[23] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71), which has no missing parents
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 44.9 KiB, free 434.2 MiB)
+24/05/05 20:13:04 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 21.8 KiB, free 434.1 MiB)
+24/05/05 20:13:04 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 21.8 KiB, free: 434.3 MiB)
+24/05/05 20:13:04 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:04 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (PythonRDD[23] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+24/05/05 20:13:04 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 34) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+24/05/05 20:13:04 INFO Executor: Running task 0.0 in stage 8.0 (TID 34)
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Getting 1 (192.0 B) non-empty blocks including 1 (192.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:04 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 12.467081 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 18.990713 ms
+24/05/05 20:13:04 INFO CodeGenerator: Code generated in 5.865656 ms
+24/05/05 20:13:04 INFO PythonRunner: Times: total = 82, boot = -1748, init = 1830, finish = 0
+24/05/05 20:13:04 INFO Executor: Finished task 0.0 in stage 8.0 (TID 34). 6658 bytes result sent to driver
+24/05/05 20:13:04 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 34) in 153 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool
+24/05/05 20:13:04 INFO DAGScheduler: ResultStage 8 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71) finished in 0.162 s
+24/05/05 20:13:04 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:04 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+24/05/05 20:13:04 INFO DAGScheduler: Job 4 finished: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:71, took 0.168102 s
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 24.637779 ms
+24/05/05 20:13:05 INFO DAGScheduler: Registering RDD 25 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+24/05/05 20:13:05 INFO DAGScheduler: Got map stage job 5 (javaToPython at NativeMethodAccessorImpl.java:0) with 16 output partitions     
+24/05/05 20:13:05 INFO DAGScheduler: Final stage: ShuffleMapStage 9 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:05 INFO DAGScheduler: Parents of final stage: List()
+24/05/05 20:13:05 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:05 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[25] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 39.3 KiB, free 434.1 MiB)
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 18.5 KiB, free 434.1 MiB)
+24/05/05 20:13:05 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 18.5 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:05 INFO DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[25] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Adding task set 9.0 with 16 tasks resource profile 0
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 35) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, PROCESS_LOCAL, 91135 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 36) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 1, PROCESS_LOCAL, 90897 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 2.0 in stage 9.0 (TID 37) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 2, PROCESS_LOCAL, 92942 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 3.0 in stage 9.0 (TID 38) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 3, PROCESS_LOCAL, 91356 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 4.0 in stage 9.0 (TID 39) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 4, PROCESS_LOCAL, 92160 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 5.0 in stage 9.0 (TID 40) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 5, PROCESS_LOCAL, 92757 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 6.0 in stage 9.0 (TID 41) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 6, PROCESS_LOCAL, 92032 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 7.0 in stage 9.0 (TID 42) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 7, PROCESS_LOCAL, 90356 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 8.0 in stage 9.0 (TID 43) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 8, PROCESS_LOCAL, 90759 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 9.0 in stage 9.0 (TID 44) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 9, PROCESS_LOCAL, 92968 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 10.0 in stage 9.0 (TID 45) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 10, PROCESS_LOCAL, 91484 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 11.0 in stage 9.0 (TID 46) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 11, PROCESS_LOCAL, 92824 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 12.0 in stage 9.0 (TID 47) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 12, PROCESS_LOCAL, 92962 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 13.0 in stage 9.0 (TID 48) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 13, PROCESS_LOCAL, 92877 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 14.0 in stage 9.0 (TID 49) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 14, PROCESS_LOCAL, 93346 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 15.0 in stage 9.0 (TID 50) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 15, PROCESS_LOCAL, 92907 bytes)
+24/05/05 20:13:05 INFO Executor: Running task 3.0 in stage 9.0 (TID 38)
+24/05/05 20:13:05 INFO Executor: Running task 1.0 in stage 9.0 (TID 36)
+24/05/05 20:13:05 INFO Executor: Running task 0.0 in stage 9.0 (TID 35)
+24/05/05 20:13:05 INFO Executor: Running task 2.0 in stage 9.0 (TID 37)
+24/05/05 20:13:05 INFO Executor: Running task 15.0 in stage 9.0 (TID 50)
+24/05/05 20:13:05 INFO Executor: Running task 10.0 in stage 9.0 (TID 45)
+24/05/05 20:13:05 INFO Executor: Running task 6.0 in stage 9.0 (TID 41)
+24/05/05 20:13:05 INFO Executor: Running task 14.0 in stage 9.0 (TID 49)
+24/05/05 20:13:05 INFO Executor: Running task 11.0 in stage 9.0 (TID 46)
+24/05/05 20:13:05 INFO Executor: Running task 8.0 in stage 9.0 (TID 43)
+24/05/05 20:13:05 INFO Executor: Running task 13.0 in stage 9.0 (TID 48)
+24/05/05 20:13:05 INFO Executor: Running task 5.0 in stage 9.0 (TID 40)
+24/05/05 20:13:05 INFO Executor: Running task 12.0 in stage 9.0 (TID 47)
+24/05/05 20:13:05 INFO Executor: Running task 9.0 in stage 9.0 (TID 44)
+24/05/05 20:13:05 INFO Executor: Running task 7.0 in stage 9.0 (TID 42)
+24/05/05 20:13:05 INFO Executor: Running task 4.0 in stage 9.0 (TID 39)
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 52.717485 ms
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 92, boot = -1877, init = 1968, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 90, boot = -2043, init = 2132, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 115, boot = -1852, init = 1966, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 127, boot = -1844, init = 1970, finish = 1
+24/05/05 20:13:05 INFO Executor: Finished task 12.0 in stage 9.0 (TID 47). 2937 bytes result sent to driver
+24/05/05 20:13:05 INFO Executor: Finished task 3.0 in stage 9.0 (TID 38). 2937 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 12.0 in stage 9.0 (TID 47) in 174 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/16)
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 3.0 in stage 9.0 (TID 38) in 178 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (2/16)
+24/05/05 20:13:05 INFO Executor: Finished task 0.0 in stage 9.0 (TID 35). 2937 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 35) in 200 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (3/16)
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 150, boot = -1863, init = 2012, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 140, boot = -2095, init = 2234, finish = 1
+24/05/05 20:13:05 INFO Executor: Finished task 2.0 in stage 9.0 (TID 37). 2937 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 2.0 in stage 9.0 (TID 37) in 203 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (4/16)
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 137, boot = -1850, init = 1986, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 181, boot = -1869, init = 2049, finish = 1
+24/05/05 20:13:05 INFO Executor: Finished task 14.0 in stage 9.0 (TID 49). 2937 bytes result sent to driver
+24/05/05 20:13:05 INFO Executor: Finished task 5.0 in stage 9.0 (TID 40). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO Executor: Finished task 6.0 in stage 9.0 (TID 41). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 5.0 in stage 9.0 (TID 40) in 253 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (5/16)
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 6.0 in stage 9.0 (TID 41) in 253 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (6/16)
+24/05/05 20:13:05 INFO Executor: Finished task 1.0 in stage 9.0 (TID 36). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 143, boot = -1842, init = 1984, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 164, boot = -1862, init = 2025, finish = 1
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 14.0 in stage 9.0 (TID 49) in 252 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (7/16)
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 36) in 257 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (8/16)
+24/05/05 20:13:05 INFO Executor: Finished task 11.0 in stage 9.0 (TID 46). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO Executor: Finished task 7.0 in stage 9.0 (TID 42). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 11.0 in stage 9.0 (TID 46) in 258 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (9/16)
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 7.0 in stage 9.0 (TID 42) in 261 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (10/16)
+24/05/05 20:13:05 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 in memory (size: 18.5 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 220, boot = -1861, init = 2080, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 225, boot = -1848, init = 2072, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 207, boot = -1844, init = 2050, finish = 1
+24/05/05 20:13:05 INFO Executor: Finished task 15.0 in stage 9.0 (TID 50). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO Executor: Finished task 10.0 in stage 9.0 (TID 45). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 15.0 in stage 9.0 (TID 50) in 274 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (11/16)
+24/05/05 20:13:05 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 in memory (size: 8.3 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO Executor: Finished task 8.0 in stage 9.0 (TID 43). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 10.0 in stage 9.0 (TID 45) in 278 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (12/16)
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 8.0 in stage 9.0 (TID 43) in 279 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (13/16)
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 211, boot = -1172, init = 1383, finish = 0
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 216, boot = -1827, init = 2040, finish = 3
+24/05/05 20:13:05 INFO Executor: Finished task 4.0 in stage 9.0 (TID 39). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 4.0 in stage 9.0 (TID 39) in 286 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (14/16)
+24/05/05 20:13:05 INFO Executor: Finished task 9.0 in stage 9.0 (TID 44). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 9.0 in stage 9.0 (TID 44) in 286 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (15/16)
+24/05/05 20:13:05 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 in memory (size: 21.8 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 250, boot = -2041, init = 2290, finish = 1
+24/05/05 20:13:05 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 in memory (size: 20.1 KiB, free: 434.4 MiB)
+24/05/05 20:13:05 INFO Executor: Finished task 13.0 in stage 9.0 (TID 48). 2980 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 13.0 in stage 9.0 (TID 48) in 294 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (16/16)
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool
+24/05/05 20:13:05 INFO DAGScheduler: ShuffleMapStage 9 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.309 s
+24/05/05 20:13:05 INFO DAGScheduler: looking for newly runnable stages
+24/05/05 20:13:05 INFO DAGScheduler: running: Set()
+24/05/05 20:13:05 INFO DAGScheduler: waiting: Set()
+24/05/05 20:13:05 INFO DAGScheduler: failed: Set()
+24/05/05 20:13:05 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 in memory (size: 20.4 KiB, free: 434.4 MiB)
+24/05/05 20:13:05 INFO ShufflePartitionsUtil: For shuffle(2), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/05 20:13:05 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 6.974817 ms
+24/05/05 20:13:05 INFO SparkContext: Starting job: javaToPython at NativeMethodAccessorImpl.java:0
+24/05/05 20:13:05 INFO DAGScheduler: Got job 6 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/05/05 20:13:05 INFO DAGScheduler: Final stage: ResultStage 11 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 10)
+24/05/05 20:13:05 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:05 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[30] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 41.5 KiB, free 434.3 MiB)
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 20.1 KiB, free 434.3 MiB)
+24/05/05 20:13:05 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 20.1 KiB, free: 434.4 MiB)
+24/05/05 20:13:05 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[30] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 51) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+24/05/05 20:13:05 INFO Executor: Running task 0.0 in stage 11.0 (TID 51)
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Getting 16 (3.1 KiB) non-empty blocks including 16 (3.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/05/05 20:13:05 INFO Executor: Finished task 0.0 in stage 11.0 (TID 51). 5497 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 51) in 19 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool
+24/05/05 20:13:05 INFO DAGScheduler: ResultStage 11 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.032 s
+24/05/05 20:13:05 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Killing all running tasks in stage 11: Stage finished
+24/05/05 20:13:05 INFO DAGScheduler: Job 6 finished: javaToPython at NativeMethodAccessorImpl.java:0, took 0.036319 s
+24/05/05 20:13:05 INFO DAGScheduler: Registering RDD 31 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 3
+24/05/05 20:13:05 INFO DAGScheduler: Got map stage job 7 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions      
+24/05/05 20:13:05 INFO DAGScheduler: Final stage: ShuffleMapStage 13 (javaToPython at NativeMethodAccessorImpl.java:0)
+24/05/05 20:13:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+24/05/05 20:13:05 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:05 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[31] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 42.1 KiB, free 434.2 MiB)
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 20.4 KiB, free 434.2 MiB)
+24/05/05 20:13:05 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 20.4 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:05 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[31] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 52) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7604 bytes)
+24/05/05 20:13:05 INFO Executor: Running task 0.0 in stage 13.0 (TID 52)
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 8.429397 ms
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Getting 16 (3.1 KiB) non-empty blocks including 16 (3.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+24/05/05 20:13:05 INFO Executor: Finished task 0.0 in stage 13.0 (TID 52). 5473 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 52) in 32 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool
+24/05/05 20:13:05 INFO DAGScheduler: ShuffleMapStage 13 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.042 s
+24/05/05 20:13:05 INFO DAGScheduler: looking for newly runnable stages
+24/05/05 20:13:05 INFO DAGScheduler: running: Set()
+24/05/05 20:13:05 INFO DAGScheduler: waiting: Set()
+24/05/05 20:13:05 INFO DAGScheduler: failed: Set()
+24/05/05 20:13:05 INFO ShufflePartitionsUtil: For shuffle(3), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+24/05/05 20:13:05 INFO SparkContext: Starting job: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83
+24/05/05 20:13:05 INFO DAGScheduler: Got job 8 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83) with 1 output partitions
+24/05/05 20:13:05 INFO DAGScheduler: Final stage: ResultStage 16 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83)
+24/05/05 20:13:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 15)
+24/05/05 20:13:05 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:05 INFO DAGScheduler: Submitting ResultStage 16 (PythonRDD[37] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83), which has no missing parents
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 44.8 KiB, free 434.2 MiB)
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 21.8 KiB, free 434.2 MiB)
+24/05/05 20:13:05 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 21.8 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 16 (PythonRDD[37] at collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Adding task set 16.0 with 1 tasks resource profile 0
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 53) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+24/05/05 20:13:05 INFO Executor: Running task 0.0 in stage 16.0 (TID 53)
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Getting 1 (198.0 B) non-empty blocks including 1 (198.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 7.766603 ms
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 91, boot = -1419, init = 1509, finish = 1
+24/05/05 20:13:05 INFO Executor: Finished task 0.0 in stage 16.0 (TID 53). 6657 bytes result sent to driver
+24/05/05 20:13:05 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 53) in 111 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool
+24/05/05 20:13:05 INFO DAGScheduler: ResultStage 16 (collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83) finished in 0.119 s
+24/05/05 20:13:05 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Killing all running tasks in stage 16: Stage finished
+24/05/05 20:13:05 INFO DAGScheduler: Job 8 finished: collect at /home/hadooopusr/CMP_SCI_8540/setup.py:83, took 0.122679 s
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 9.274182 ms
+24/05/05 20:13:05 INFO DAGScheduler: Registering RDD 40 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) as input to shuffle 4
+24/05/05 20:13:05 INFO DAGScheduler: Got map stage job 9 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) with 16 output partitions  
+24/05/05 20:13:05 INFO DAGScheduler: Final stage: ShuffleMapStage 17 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95)
+24/05/05 20:13:05 INFO DAGScheduler: Parents of final stage: List()
+24/05/05 20:13:05 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:05 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[40] at first at /home/hadooopusr/CMP_SCI_8540/setup.py:95), which has no missing parents
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 27.8 KiB, free 434.1 MiB)
+24/05/05 20:13:05 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 13.3 KiB, free 434.1 MiB)
+24/05/05 20:13:05 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 13.3 KiB, free: 434.3 MiB)
+24/05/05 20:13:05 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:05 INFO DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[40] at first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+24/05/05 20:13:05 INFO TaskSchedulerImpl: Adding task set 17.0 with 16 tasks resource profile 0
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 54) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, PROCESS_LOCAL, 91135 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 1.0 in stage 17.0 (TID 55) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 1, PROCESS_LOCAL, 90897 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 2.0 in stage 17.0 (TID 56) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 2, PROCESS_LOCAL, 92942 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 3.0 in stage 17.0 (TID 57) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 3, PROCESS_LOCAL, 91356 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 4.0 in stage 17.0 (TID 58) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 4, PROCESS_LOCAL, 92160 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 5.0 in stage 17.0 (TID 59) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 5, PROCESS_LOCAL, 92757 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 6.0 in stage 17.0 (TID 60) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 6, PROCESS_LOCAL, 92032 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 7.0 in stage 17.0 (TID 61) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 7, PROCESS_LOCAL, 90356 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 8.0 in stage 17.0 (TID 62) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 8, PROCESS_LOCAL, 90759 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 9.0 in stage 17.0 (TID 63) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 9, PROCESS_LOCAL, 92968 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 10.0 in stage 17.0 (TID 64) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 10, PROCESS_LOCAL, 91484 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 11.0 in stage 17.0 (TID 65) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 11, PROCESS_LOCAL, 92824 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 12.0 in stage 17.0 (TID 66) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 12, PROCESS_LOCAL, 92962 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 13.0 in stage 17.0 (TID 67) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 13, PROCESS_LOCAL, 92877 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 14.0 in stage 17.0 (TID 68) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 14, PROCESS_LOCAL, 93346 bytes)
+24/05/05 20:13:05 INFO TaskSetManager: Starting task 15.0 in stage 17.0 (TID 69) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 15, PROCESS_LOCAL, 92907 bytes)
+24/05/05 20:13:05 INFO Executor: Running task 1.0 in stage 17.0 (TID 55)
+24/05/05 20:13:05 INFO Executor: Running task 5.0 in stage 17.0 (TID 59)
+24/05/05 20:13:05 INFO Executor: Running task 2.0 in stage 17.0 (TID 56)
+24/05/05 20:13:05 INFO Executor: Running task 7.0 in stage 17.0 (TID 61)
+24/05/05 20:13:05 INFO Executor: Running task 3.0 in stage 17.0 (TID 57)
+24/05/05 20:13:05 INFO Executor: Running task 4.0 in stage 17.0 (TID 58)
+24/05/05 20:13:05 INFO Executor: Running task 8.0 in stage 17.0 (TID 62)
+24/05/05 20:13:05 INFO Executor: Running task 6.0 in stage 17.0 (TID 60)
+24/05/05 20:13:05 INFO Executor: Running task 0.0 in stage 17.0 (TID 54)
+24/05/05 20:13:05 INFO Executor: Running task 11.0 in stage 17.0 (TID 65)
+24/05/05 20:13:05 INFO Executor: Running task 9.0 in stage 17.0 (TID 63)
+24/05/05 20:13:05 INFO Executor: Running task 13.0 in stage 17.0 (TID 67)
+24/05/05 20:13:05 INFO Executor: Running task 15.0 in stage 17.0 (TID 69)
+24/05/05 20:13:05 INFO Executor: Running task 14.0 in stage 17.0 (TID 68)
+24/05/05 20:13:05 INFO Executor: Running task 12.0 in stage 17.0 (TID 66)
+24/05/05 20:13:05 INFO Executor: Running task 10.0 in stage 17.0 (TID 64)
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 7.329924 ms
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 4.329183 ms
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 8.821242 ms
+24/05/05 20:13:05 INFO CodeGenerator: Code generated in 6.696655 ms
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 143, boot = -1775, init = 1917, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 100, boot = -1823, init = 1922, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 141, boot = -1794, init = 1934, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 110, boot = -1876, init = 1985, finish = 1
+24/05/05 20:13:05 INFO PythonRunner: Times: total = 83, boot = -1798, init = 1880, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 94, boot = -1800, init = 1885, finish = 9
+24/05/05 20:13:06 INFO CodeGenerator: Code generated in 10.497467 ms
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 140, boot = -919, init = 1058, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 86, boot = -1806, init = 1891, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 174, boot = -1820, init = 1993, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 169, boot = -1736, init = 1904, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 164, boot = -1813, init = 1975, finish = 2
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 159, boot = -642, init = 800, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 110, boot = -1705, init = 1810, finish = 5
+24/05/05 20:13:06 INFO Executor: Finished task 3.0 in stage 17.0 (TID 57). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 1.0 in stage 17.0 (TID 55). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 7.0 in stage 17.0 (TID 61). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 3.0 in stage 17.0 (TID 57) in 255 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 7.0 in stage 17.0 (TID 61) in 254 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (2/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 1.0 in stage 17.0 (TID 55) in 257 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (3/16)
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 161, boot = -1882, init = 2042, finish = 1
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 224, boot = -1892, init = 2115, finish = 1
+24/05/05 20:13:06 INFO Executor: Finished task 14.0 in stage 17.0 (TID 68). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 11.0 in stage 17.0 (TID 65). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 14.0 in stage 17.0 (TID 68) in 262 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (4/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 11.0 in stage 17.0 (TID 65) in 263 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (5/16)
+24/05/05 20:13:06 INFO PythonRunner: Times: total = 226, boot = -1822, init = 2047, finish = 1
+24/05/05 20:13:06 INFO Executor: Finished task 15.0 in stage 17.0 (TID 69). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 12.0 in stage 17.0 (TID 66). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 15.0 in stage 17.0 (TID 69) in 264 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (6/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 12.0 in stage 17.0 (TID 66) in 265 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (7/16)
+24/05/05 20:13:06 INFO Executor: Finished task 6.0 in stage 17.0 (TID 60). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 4.0 in stage 17.0 (TID 58). 2573 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 13.0 in stage 17.0 (TID 67). 2573 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 6.0 in stage 17.0 (TID 60) in 270 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (8/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 4.0 in stage 17.0 (TID 58) in 271 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (9/16)
+24/05/05 20:13:06 INFO Executor: Finished task 0.0 in stage 17.0 (TID 54). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO Executor: Finished task 5.0 in stage 17.0 (TID 59). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 13.0 in stage 17.0 (TID 67) in 270 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (10/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 5.0 in stage 17.0 (TID 59) in 271 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (11/16)
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 54) in 273 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (12/16)
+24/05/05 20:13:06 INFO Executor: Finished task 2.0 in stage 17.0 (TID 56). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 2.0 in stage 17.0 (TID 56) in 274 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (13/16)
+24/05/05 20:13:06 INFO Executor: Finished task 9.0 in stage 17.0 (TID 63). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 9.0 in stage 17.0 (TID 63) in 274 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (14/16)
+24/05/05 20:13:06 INFO Executor: Finished task 8.0 in stage 17.0 (TID 62). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 8.0 in stage 17.0 (TID 62) in 279 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (15/16)
+24/05/05 20:13:06 INFO Executor: Finished task 10.0 in stage 17.0 (TID 64). 2530 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 10.0 in stage 17.0 (TID 64) in 281 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (16/16)
+24/05/05 20:13:06 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool
+24/05/05 20:13:06 INFO DAGScheduler: ShuffleMapStage 17 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) finished in 0.298 s
+24/05/05 20:13:06 INFO DAGScheduler: looking for newly runnable stages
+24/05/05 20:13:06 INFO DAGScheduler: running: Set()
+24/05/05 20:13:06 INFO DAGScheduler: waiting: Set()
+24/05/05 20:13:06 INFO DAGScheduler: failed: Set()
+24/05/05 20:13:06 INFO SparkContext: Starting job: first at /home/hadooopusr/CMP_SCI_8540/setup.py:95
+24/05/05 20:13:06 INFO DAGScheduler: Got job 10 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) with 1 output partitions
+24/05/05 20:13:06 INFO DAGScheduler: Final stage: ResultStage 19 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95)
+24/05/05 20:13:06 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 18)
+24/05/05 20:13:06 INFO DAGScheduler: Missing parents: List()
+24/05/05 20:13:06 INFO DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[43] at first at /home/hadooopusr/CMP_SCI_8540/setup.py:95), which has no missing parents
+24/05/05 20:13:06 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 30.1 KiB, free 434.1 MiB)
+24/05/05 20:13:06 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 14.6 KiB, free 434.1 MiB)        
+24/05/05 20:13:06 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:41587 (size: 14.6 KiB, free: 434.3 MiB)
+24/05/05 20:13:06 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1585
+24/05/05 20:13:06 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 19 (MapPartitionsRDD[43] at first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) (first 15 tasks are for partitions Vector(0))
+24/05/05 20:13:06 INFO TaskSchedulerImpl: Adding task set 19.0 with 1 tasks resource profile 0
+24/05/05 20:13:06 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 70) (582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512, executor driver, partition 0, NODE_LOCAL, 7615 bytes)
+24/05/05 20:13:06 INFO Executor: Running task 0.0 in stage 19.0 (TID 70)
+24/05/05 20:13:06 INFO ShuffleBlockFetcherIterator: Getting 16 (743.3 KiB) non-empty blocks including 16 (743.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+24/05/05 20:13:06 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+24/05/05 20:13:06 INFO CodeGenerator: Code generated in 5.619003 ms
+24/05/05 20:13:06 INFO Executor: Finished task 0.0 in stage 19.0 (TID 70). 672095 bytes result sent to driver
+24/05/05 20:13:06 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 70) in 49 ms on 582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512 (executor driver) (1/1)
+24/05/05 20:13:06 INFO TaskSchedulerImpl: Removed TaskSet 19.0, whose tasks have all completed, from pool
+24/05/05 20:13:06 INFO DAGScheduler: ResultStage 19 (first at /home/hadooopusr/CMP_SCI_8540/setup.py:95) finished in 0.056 s
+24/05/05 20:13:06 INFO DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+24/05/05 20:13:06 INFO TaskSchedulerImpl: Killing all running tasks in stage 19: Stage finished
+24/05/05 20:13:06 INFO DAGScheduler: Job 10 finished: first at /home/hadooopusr/CMP_SCI_8540/setup.py:95, took 0.059459 s
+24/05/05 20:13:07 INFO SparkContext: Invoking stop() from shutdown hook
+24/05/05 20:13:07 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/05/05 20:13:07 INFO SparkUI: Stopped Spark web UI at http://582b766c-af74-4b34-93f6-5b8567b709c2-utah-16-64-512:4050
+24/05/05 20:13:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/05/05 20:13:07 INFO MemoryStore: MemoryStore cleared
+24/05/05 20:13:07 INFO BlockManager: BlockManager stopped
+24/05/05 20:13:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/05/05 20:13:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/05/05 20:13:07 INFO SparkContext: Successfully stopped SparkContext
+24/05/05 20:13:07 INFO ShutdownHookManager: Shutdown hook called
+24/05/05 20:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-35aa719c-8211-4d38-9cd3-6d4226142bf1/pyspark-69a879f9-c778-4392-ab5d-0ec5b0fb0367
+24/05/05 20:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-35aa719c-8211-4d38-9cd3-6d4226142bf1
+24/05/05 20:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-13058768-e190-453f-accf-f6fc576b49f0
