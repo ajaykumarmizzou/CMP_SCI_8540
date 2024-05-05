@@ -1,3 +1,5 @@
+
+#Importing libraries
 import os
 import pandas as pd
 from datasets import load_dataset
@@ -6,25 +8,24 @@ from sklearn.model_selection import train_test_split
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import seaborn as sns
-# To extract hashtags
+#To extract hashtags
 import neattext.functions as nfx
 import re
-
+#pyspark libraries
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 from pyspark.sql.functions import length
 from pyspark.sql.functions import concat_ws, collect_list
 
+#Creating spark session
 spark = SparkSession.builder.appName("DataProcess").config('spark.ui.port', '4050').getOrCreate()
 # Disabe W&B
 os.environ["WANDB_DISABLED"] = "true"
-
+export PYSPARK_PYTHON=./venv/bin/python
 # Load the dataset and display some values
-Link = 'Phase2/Train.csv'
-
+Link = 'data/Train.csv'
 df = pd.read_csv(Link)
 #Create a PySpark DataFrame from a pandas DataFrame
-import pandas as pd
 # Assuming 'df' is your pandas DataFrame
 for column_name, dtype in df.dtypes.items():
     try:
@@ -35,34 +36,25 @@ for column_name, dtype in df.dtypes.items():
 sdf = spark.createDataFrame(df)
 sdf.show()
 
-
 exit()
 # A way to eliminate rows containing NaN values
 sdf = sdf.dropna()
 sdf.show()
-
-
 # We look at the number of positive, negative and neutral reviews
 counts = sdf.groupBy("label").count().orderBy(col("count").desc())
 counts.show()
-
-
 # The count of the agrremtns
 agree_count = sdf.groupBy("agreement").count().orderBy(col("agreement").desc())
 agree_count.show()
-
-
 # Legnth of the reviews
 review_length = sdf.select(length('safe_text')).withColumnRenamed("length(safe_text)", "review_length")
 review_length.show()
 # Legnth of the longest review
 max_length=review_length.agg({"review_length": "max"}).withColumnRenamed("max(review_length)", "max_review_length")
 max_length.show()
-
 #Legnth of the shortest review
 min_length=review_length.agg({"review_length": "min"}).withColumnRenamed("max(review_length)", "max_review_length")
 min_length.show()
-
 # Length of Tweets
 #text_length = df['safe_text'].apply(len)
 text_length = review_length.rdd.map(lambda x: x[0])
