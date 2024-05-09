@@ -2,6 +2,9 @@
 ## Introduction
 This project tackles a critical public health challenge: understanding public sentiment towards COVID-19 vaccinations. This project tackles sentiment analysis of COVID-19 vaccination tweets using a machine-learning model. The vast amount of textual data on Twitter, categorized as "big data," necessitates the use of Large Language Models (LLMs) for efficient processing.  We implemented a machine learning solution that leverages Large Language Models (LLMs) to analyze this data and extract valuable insights. However, raw social media data requires preprocessing to bridge the gap between the unstructured format and the needs of LLMs. This preprocessing will transform the tweets into a format suitable for LLM analysis. Our core focus is sentiment analysis, the process of identifying the emotional tone within textual data. By applying this technique to COVID-19 vaccination tweets, we aim to generate insights that can inform public health strategies. Understanding public sentiment is crucial for effective interventions, and the insights from our model can be used to tailor communication strategies and ultimately improve vaccination programs worldwide. This project presents a novel approach to analyzing big data from social media using LLMs and sentiment analysis. The generated insights have the potential to significantly impact public health efforts in the fight against COVID-19.
 
+![1715271404530-101aa805-c477-45a7-b9a0-aefc9edd0d18_1](https://github.com/ajaykumarmizzou/CMP_SCI_8540/assets/44158088/7bb5b040-13d2-47de-baf8-c1a33f3b7dc4)
+
+
 ## Dataset
 
 The data comes from tweets collected and classified through Crowdbreaks.org [Muller, Martin M., and Marcel Salathe. "Crowdbreaks: Tracking Health Trends Using Public Social Media Data and Crowdsourcing." Frontiers in public health 7 (2019).]. Tweets have been classified as pro-vaccine (1), neutral (0) or anti-vaccine (-1). The tweets have had usernames and web addresses removed.
