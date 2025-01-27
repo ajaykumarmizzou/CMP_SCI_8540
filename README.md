@@ -55,4 +55,4 @@ By combining these technologies, we aim to build a robust and efficient data pro
 
 
 ## Team
-Akshata Hegde (aghktb), Yanli Wang (yw7bh), Ajay Kumar (akt5b)
+Ajay Kumar (akt5b), Akshata Hegde (aghktb), Yanli Wang (yw7bh)
